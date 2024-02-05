@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = STOXX50
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 25
+MaxOpenSell = 25
+PipStep = 375
+StopLossPips = 5000
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 25
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 1.7
+relationValue = 0.7
+firstVolumeRP = 0.7
+haltPercent = 0

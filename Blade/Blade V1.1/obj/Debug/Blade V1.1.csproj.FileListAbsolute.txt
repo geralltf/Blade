@@ -1,0 +1,9 @@
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\obj\Debug\Blade V1.1.csprojAssemblyReference.cache
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\obj\Debug\Blade V1.1.csproj.CoreCompileInputs.cache
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\bin\Debug\Blade Custom v1.1.dll
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\bin\Debug\Blade Custom v1.1.pdb
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\bin\Debug\cAlgo.API.dll
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\bin\Debug\cAlgo.API.xml
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\obj\Debug\Blade V1.1.csproj.CopyComplete
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\obj\Debug\Blade Custom v1.1.dll
+C:\Users\Akira\Documents\cAlgo\Sources\Robots\Blade Custom v1.0\Blade\obj\Debug\Blade Custom v1.1.pdb

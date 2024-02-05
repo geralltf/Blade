@@ -1,0 +1,21 @@
+﻿[ChartParameters]
+Symbol = USDRUB
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 8
+MaxOpenSell = 8
+PipStep = 2725
+StopLoss = 0
+FirstVolume = 10
+MaxSpread = 3
+AverageTakeProfit = 25
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 27
+PowerFactor = 1
+PowerOffset = 0
+EquityMultiplier = 1000
+PercentIncreaseThreshold = 1000
+RiskPercent = 15
+CryptographicPRNG = False
+ApplyLotMultiplier = True

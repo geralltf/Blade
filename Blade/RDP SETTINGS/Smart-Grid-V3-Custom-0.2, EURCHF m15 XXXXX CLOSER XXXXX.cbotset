@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = EURCHF
+Timeframe = m15
+
+[cBotParameters]
+MaxOpenBuy = 35
+MaxOpenSell = 35
+PipStep = 7
+StopLossPips = 300
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 1
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 1.7
+relationValue = -0.3
+firstVolumeRP = 3
+haltPercent = 0

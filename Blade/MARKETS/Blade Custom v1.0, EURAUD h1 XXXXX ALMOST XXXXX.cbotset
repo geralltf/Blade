@@ -1,0 +1,15 @@
+﻿[ChartParameters]
+Symbol = EURAUD
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 10
+MaxOpenSell = 10
+PipStep = 75
+StopLossPips = 475
+FirstVolume = 10
+MaxSpread = 3
+AverageTakeProfit = 25
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.7
+TakeProfit = 45

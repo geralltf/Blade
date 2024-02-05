@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = CADJPY
+Timeframe = m15
+
+[cBotParameters]
+MaxOpenBuy = 25
+MaxOpenSell = 25
+PipStep = 1
+StopLossPips = 750
+FirstVolume = 1
+MaxSpread = 7
+AverageTakeProfit = 5
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 1.3
+relationValue = 1.5
+firstVolumeRP = 2.7
+haltPercent = 0

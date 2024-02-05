@@ -1,0 +1,15 @@
+﻿[ChartParameters]
+Symbol = DSHUSD
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 15
+MaxOpenSell = 15
+PipStep = 1025
+StopLossPips = 100
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 575
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.7
+TakeProfit = 45

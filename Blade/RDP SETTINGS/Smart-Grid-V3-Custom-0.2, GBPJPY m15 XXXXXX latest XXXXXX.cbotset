@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = GBPJPY
+Timeframe = m15
+
+[cBotParameters]
+MaxOpenBuy = 25
+MaxOpenSell = 25
+PipStep = 27
+StopLossPips = 1000
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 3
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 4.6
+relationValue = -0.7
+firstVolumeRP = 0
+haltPercent = 0

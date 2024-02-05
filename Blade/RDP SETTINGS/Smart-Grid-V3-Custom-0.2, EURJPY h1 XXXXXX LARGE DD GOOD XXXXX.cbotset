@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = EURJPY
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 8
+MaxOpenSell = 8
+PipStep = 125
+StopLossPips = 2000
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 15
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 4.7
+relationValue = -0.7
+firstVolumeRP = 5
+haltPercent = 75

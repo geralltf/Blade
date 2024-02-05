@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = GBPAUD
+Timeframe = m1
+
+[cBotParameters]
+MaxOpenBuy = 12
+MaxOpenSell = 12
+PipStep = 175
+StopLossPips = 725
+FirstVolume = 1
+MaxSpread = 25
+AverageTakeProfit = 25
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 3.7
+relationValue = -0.3
+firstVolumeRP = 15
+haltPercent = 75

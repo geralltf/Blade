@@ -1,0 +1,21 @@
+﻿[ChartParameters]
+Symbol = CHINAH
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 25
+MaxOpenSell = 25
+PipStep = 1500
+StopLoss = 0
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 5
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.7
+PowerFactor = 0.7
+PowerOffset = 1.7
+EquityMultiplier = 1
+PercentIncreaseThreshold = 700
+RiskPercent = 7
+CryptographicPRNG = False
+ApplyLotMultiplier = True

@@ -1,0 +1,15 @@
+﻿[ChartParameters]
+Symbol = XAUUSD
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 15
+MaxOpenSell = 15
+PipStep = 575
+StopLossPips = 1000
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 75
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.7
+TakeProfit = 45

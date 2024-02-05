@@ -1,0 +1,21 @@
+﻿[ChartParameters]
+Symbol = USDCAD
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 15
+MaxOpenSell = 0
+PipStep = 25
+StopLoss = 0
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 0
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.3
+PowerFactor = 1
+PowerOffset = 0.3
+EquityMultiplier = 1000
+PercentIncreaseThreshold = 700
+RiskPercent = 10
+CryptographicPRNG = True
+ApplyLotMultiplier = True

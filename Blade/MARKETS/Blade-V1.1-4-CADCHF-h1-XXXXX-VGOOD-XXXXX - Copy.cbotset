@@ -1,0 +1,18 @@
+﻿[ChartParameters]
+Symbol = CADCHF
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 15
+MaxOpenSell = 15
+PipStep = 135
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 5
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 1.5
+PowerFactor = 1
+PowerOffset = 0
+PercentIncreaseThreshold = 95
+RiskPercent = 10
+CryptographicPRNG = True

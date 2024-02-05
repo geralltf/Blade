@@ -1,0 +1,15 @@
+﻿[ChartParameters]
+Symbol = GBPSEK
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 15
+MaxOpenSell = 15
+PipStep = 475
+StopLossPips = 500
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 75
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.3
+TakeProfit = 45

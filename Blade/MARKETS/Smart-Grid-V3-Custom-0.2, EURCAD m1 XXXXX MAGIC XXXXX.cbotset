@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = EURCAD
+Timeframe = m1
+
+[cBotParameters]
+MaxOpenBuy = 9
+MaxOpenSell = 9
+PipStep = 75
+StopLossPips = 475
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 3
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.7
+relationValue = -0.3
+firstVolumeRP = 3
+haltPercent = 75

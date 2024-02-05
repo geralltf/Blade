@@ -1,0 +1,21 @@
+﻿[ChartParameters]
+Symbol = USDMXN
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 25
+MaxOpenSell = 25
+PipStep = 750
+StopLoss = 0
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 5
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.7
+PowerFactor = 0.7
+PowerOffset = 1.3
+EquityMultiplier = 1250
+PercentIncreaseThreshold = 700
+RiskPercent = 5
+CryptographicPRNG = False
+ApplyLotMultiplier = True

@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = GBPNOK
+Timeframe = m15
+
+[cBotParameters]
+MaxOpenBuy = 35
+MaxOpenSell = 35
+PipStep = 750
+StopLossPips = 5000
+FirstVolume = 1
+MaxSpread = 1
+AverageTakeProfit = 175
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 1.7
+relationValue = -0.7
+firstVolumeRP = 2.5
+haltPercent = 0

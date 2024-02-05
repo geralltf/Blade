@@ -1,0 +1,15 @@
+﻿[ChartParameters]
+Symbol = NOKSEK
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 15
+MaxOpenSell = 15
+PipStep = 45
+StopLossPips = 500
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 5
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.3
+TakeProfit = 45

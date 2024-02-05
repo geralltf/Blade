@@ -1,0 +1,17 @@
+﻿[ChartParameters]
+Symbol = XAGUSD
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 25
+MaxOpenSell = 25
+PipStep = 5
+StopLossPips = 100
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 1
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 1.7
+relationValue = -0.7
+firstVolumeRP = 3
+haltPercent = 0

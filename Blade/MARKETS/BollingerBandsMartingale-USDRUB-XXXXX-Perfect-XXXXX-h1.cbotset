@@ -1,0 +1,27 @@
+﻿[ChartParameters]
+Symbol = USDRUB
+Timeframe = h1
+
+[cBotParameters]
+Source = Close
+BandPeriod = 50
+std = 1.8
+MAType = Simple
+InitialVolumePercent = 1
+StopLoss = 0
+TakeProfit = 25
+FirstVolume = 10
+MaxSpread = 3
+PipStep = 725
+MaxOpenBuy = 8
+MaxOpenSell = 8
+VolumeExponent = 35
+ApplyTakeProfit = False
+PowerFactor = 3
+PowerOffset = 0
+EquityMultiplier = 4000
+PercentIncreaseThreshold = 1000
+RiskPercent = 100
+ApplyLotMultiplier = True
+ApplyBollingerBands = True
+ApplyRandomWalk = False

@@ -1,0 +1,27 @@
+﻿[ChartParameters]
+Symbol = AUDUSD
+Timeframe = h1
+
+[cBotParameters]
+Source = Close
+BandPeriod = 30
+std = 1.8
+MAType = Exponential
+InitialVolumePercent = 1
+StopLoss = 0
+TakeProfit = 25
+FirstVolume = 1000
+MaxSpread = 3
+PipStep = 75
+MaxOpenBuy = 8
+MaxOpenSell = 8
+VolumeExponent = 2.7
+ApplyTakeProfit = False
+PowerFactor = 0.3
+PowerOffset = 0.3
+EquityMultiplier = 1000
+PercentIncreaseThreshold = 1000
+RiskPercent = 10
+ApplyLotMultiplier = True
+ApplyBollingerBands = True
+ApplyRandomWalk = False

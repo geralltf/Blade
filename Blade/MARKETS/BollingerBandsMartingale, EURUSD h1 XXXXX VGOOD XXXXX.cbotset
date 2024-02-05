@@ -1,0 +1,27 @@
+﻿[ChartParameters]
+Symbol = EURUSD
+Timeframe = h1
+
+[cBotParameters]
+Source = Close
+BandPeriod = 300
+std = 2
+MAType = Exponential
+InitialVolumePercent = 1
+StopLoss = 0
+TakeProfit = 275
+FirstVolume = 1000
+MaxSpread = 3
+PipStep = 275
+MaxOpenBuy = 8
+MaxOpenSell = 0
+VolumeExponent = 2.3
+ApplyTakeProfit = False
+PowerFactor = 1.1
+PowerOffset = 0.3
+EquityMultiplier = 1000
+PercentIncreaseThreshold = 1000
+RiskPercent = 35
+ApplyLotMultiplier = True
+ApplyBollingerBands = True
+ApplyRandomWalk = False

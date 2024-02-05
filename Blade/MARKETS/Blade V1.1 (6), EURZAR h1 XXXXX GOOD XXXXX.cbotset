@@ -1,0 +1,21 @@
+﻿[ChartParameters]
+Symbol = EURZAR
+Timeframe = h1
+
+[cBotParameters]
+MaxOpenBuy = 15
+MaxOpenSell = 0
+PipStep = 3725
+StopLoss = 0
+FirstVolume = 1
+MaxSpread = 3
+AverageTakeProfit = 0
+IfCloseAllPositionsOnStop = False
+VolumeExponent = 2.7
+PowerFactor = 1.3
+PowerOffset = 1.3
+EquityMultiplier = 700
+PercentIncreaseThreshold = 700
+RiskPercent = 10
+CryptographicPRNG = False
+ApplyLotMultiplier = True
