@@ -18,10 +18,14 @@
 //#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <iostream>
+//#include <iostream>
 //#include <OpenCL/opencl.h>
 
 ////////////////////////////////////////////////////////////////////////////////
+
+// MQL4 DLLSample.
+//---
+#define MT4_EXPFUNC __declspec(dllexport)
 
 // Use a static data size for simplicity
 //
@@ -582,9 +586,7 @@ void cleanup_kernel(CLKernel kernel)
     clReleaseContext(kernel->context);
 }
 
-// MQL4 DLLSample.
-//---
-#define MT4_EXPFUNC __declspec(dllexport)
+
 //+------------------------------------------------------------------+
 //|                                                                  |
 //+------------------------------------------------------------------+
@@ -626,86 +628,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,DWORD ul_reason_for_call,LPVOID lpReserved)
    return(TRUE);
   }
 
-MT4_EXPFUNC void _stdcall NeuralInit()
-{
-    _kernel_neural_forwardpass = new _CLKernel();
-    load_kernel(KernelSource_NeuralForwardPass, _kernel_neural_forwardpass);
-
-    _kernel_neural_propoutputs = new _CLKernel();   
-    load_kernel(KernelSource_NeuralPropOutputs, _kernel_neural_propoutputs);
-    
-    _kernel_neural_training_backprop = new _CLKernel();
-    load_kernel(KernelSource_NeuralTrainBackprop, _kernel_neural_training_backprop);
-}
-
-MT4_EXPFUNC void _stdcall NeuralDeinit()
-{
-    cleanup_kernel(_kernel_neural_forwardpass);
-    delete _kernel_neural_forwardpass;
-
-    cleanup_kernel(_kernel_neural_propoutputs);
-    delete _kernel_neural_propoutputs;
-}
-
-MT4_EXPFUNC void _stdcall NeuralForwardPass(double inputEquity, double* weights, double* hiddenValues, const int arraysize)
-{
-    cl_double input_equity = inputEquity;
-    exec_kernel(_kernel_neural_forwardpass, input_equity, weights, arraysize, &hiddenValues);
-
-    /*
-    for (int i = 0; i < NNET_hidden_count; i++)
-    {
-        double sum = weights[i * 0] * inputEquity + weights[i * 1];
-        hiddenValues[i] = sigmoid(sum);
-    }
-    // */
-}
-
-MT4_EXPFUNC void _stdcall NeuralPropagateOutputs(double* outputValue, double* hiddenValues, const int arraysize)
-{
-    exec_kernel_singleoutput(_kernel_neural_propoutputs, outputValue, hiddenValues, arraysize);
-    /*
-   double outputValue = 0;
-   for (int i = 0; i < NNET_hidden_count; i++)
-   {
-     outputValue += hiddenValues[i];
-   }
-   // */
-}
-
-// NeuralTrainBackwardPropagate(error, NNET_learningRate, NNET_momentum, weights, NNET_hidden_count * NNET_inputs_count);
-MT4_EXPFUNC bool _stdcall NeuralTrainBackwardPropagate(double error, double NNET_learningRate, double NNET_momentum, int NNET_outputs_count,
-    double* input_weights, double* output_weights, double* hiddenValues, double* deltaWeights, const int arraysize)
-{
-    int result = exec_kernel_training(_kernel_neural_training_backprop, error, NNET_learningRate, NNET_momentum, 
-        input_weights, &output_weights, 
-        hiddenValues, NNET_outputs_count, 
-        &deltaWeights, arraysize);
-
-    if (result == 0)
-    {
-        return TRUE;
-    }
-    return FALSE;
-
-    /*
-    // Backward pass
-    for (int i = 0; i < NNET_hidden_count; i++)
-    {
-      for (int j = 0; j < NNET_outputs_count; j++)
-      {
-         //double delta = errors[j] * hiddenValues[i] * (1 - hiddenValues[i]);
-         //deltaWeights[i][j] = NNET_learningRate * delta + NNET_momentum * deltaWeights[i][j];
-         //weights[i][j] += deltaWeights[i][j];
-
-         double delta = error * hiddenValues[i] * (1 - hiddenValues[i]);
-         deltaWeights[i*j] = NNET_learningRate * delta + NNET_momentum * deltaWeights[i*j];
-         weights[i*j] += deltaWeights[i*j];
-
-      }
-    }
-     // */
-}
 
 //+------------------------------------------------------------------+
 //|                                                                  |
@@ -756,9 +678,98 @@ MT4_EXPFUNC double __stdcall GetArrayItemValue(const double *arr,const int array
    return(arr[nitem]);
   }
 
+MT4_EXPFUNC int _stdcall NeuralInit(int i)
+{
+    _kernel_neural_forwardpass = new _CLKernel();
+    load_kernel(KernelSource_NeuralForwardPass, _kernel_neural_forwardpass);
+
+    _kernel_neural_propoutputs = new _CLKernel();
+    load_kernel(KernelSource_NeuralPropOutputs, _kernel_neural_propoutputs);
+
+    _kernel_neural_training_backprop = new _CLKernel();
+    load_kernel(KernelSource_NeuralTrainBackprop, _kernel_neural_training_backprop);
+
+    return i + 1;
+}
+
+MT4_EXPFUNC int _stdcall NeuralDeinit(int i)
+{
+    cleanup_kernel(_kernel_neural_forwardpass);
+    delete _kernel_neural_forwardpass;
+
+    cleanup_kernel(_kernel_neural_propoutputs);
+    delete _kernel_neural_propoutputs;
+
+    return i;
+}
+
+MT4_EXPFUNC int _stdcall NeuralForwardPass(double* weights, double* hiddenValues, const double inputEquity, const int arraysize) // const double* hiddenValues, 
+{
+    cl_double input_equity = inputEquity;
+    exec_kernel(_kernel_neural_forwardpass, input_equity, weights, arraysize, &hiddenValues);
+
+    /*
+    for (int i = 0; i < NNET_hidden_count; i++)
+    {
+        double sum = weights[i * 0] * inputEquity + weights[i * 1];
+        hiddenValues[i] = sigmoid(sum);
+    }
+    // */
+
+    return 1;
+}
+
+MT4_EXPFUNC int _stdcall NeuralPropagateOutputs(double* outputValue, double* hiddenValues, const int arraysize)
+{
+    exec_kernel_singleoutput(_kernel_neural_propoutputs, outputValue, hiddenValues, arraysize);
+    /*
+   double outputValue = 0;
+   for (int i = 0; i < NNET_hidden_count; i++)
+   {
+     outputValue += hiddenValues[i];
+   }
+   // */
+
+    return 1;
+}
+
+MT4_EXPFUNC int _stdcall NeuralTrainBackwardPropagate(double* input_weights, double* output_weights, double* hiddenValues, double* deltaWeights,
+    const double error, const double learningRate, const double momentum, const int outputs_count, const int arraysize)
+{
+    int result = exec_kernel_training(_kernel_neural_training_backprop, error, learningRate, momentum,
+        input_weights, &output_weights,
+        hiddenValues, outputs_count,
+        &deltaWeights, arraysize);
+
+    if (result == 0)
+    {
+        return TRUE;
+    } 
+    return FALSE;
+
+    /*
+    // Backward pass
+    for (int i = 0; i < NNET_hidden_count; i++)
+    {
+      for (int j = 0; j < NNET_outputs_count; j++)
+      {
+         //double delta = errors[j] * hiddenValues[i] * (1 - hiddenValues[i]);
+         //deltaWeights[i][j] = NNET_learningRate * delta + NNET_momentum * deltaWeights[i][j];
+         //weights[i][j] += deltaWeights[i][j];
+
+         double delta = error * hiddenValues[i] * (1 - hiddenValues[i]);
+         deltaWeights[i*j] = NNET_learningRate * delta + NNET_momentum * deltaWeights[i*j];
+         weights[i*j] += deltaWeights[i*j];
+
+      }
+    }
+     // */
+}
+
 //+------------------------------------------------------------------+
 //|                                                                  |
 //+------------------------------------------------------------------+
+
 MT4_EXPFUNC bool _stdcall SetArrayItemValue(double *arr,const int arraysize,const int nitem,const double value)
   {
 //---
