@@ -1,9 +1,0 @@
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\bin\Debug\Smart Grid V3.dll
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\bin\Debug\Smart Grid V3.pdb
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\bin\Debug\cAlgo.API.dll
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\bin\Debug\cAlgo.API.xml
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\obj\Debug\Smart Grid V3.csprojAssemblyReference.cache
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\obj\Debug\Smart Grid V3.csproj.CoreCompileInputs.cache
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\obj\Debug\Smart Grid V3.csproj.CopyComplete
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\obj\Debug\Smart Grid V3.dll
-C:\Users\Akira\Documents\cAlgo\Sources\Robots\Smart Grid V3\Smart Grid V3\obj\Debug\Smart Grid V3.pdb
